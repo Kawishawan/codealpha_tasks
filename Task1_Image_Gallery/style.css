@@ -1,0 +1,24 @@
+/* Image Gallery - style.css */
+:root{--accent:#4b7bec;--gap:14px}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Segoe UI,Arial;background:#fff;color:#111;margin:0;padding:20px}
+header{margin-bottom:12px}
+h1{margin:.2rem 0}
+.controls{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.controls button{padding:8px 12px;border-radius:8px;border:1px solid #ddd;background:#f7f7f7;cursor:pointer}
+.controls button.active{background:var(--accent);color:white;border-color:var(--accent)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--gap)}
+.gallery figure{margin:0;border-radius:10px;overflow:hidden;background:#fafafa;box-shadow:0 6px 18px rgba(0,0,0,0.06);transition:transform .18s,box-shadow .18s;cursor:pointer}
+.gallery figure:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(0,0,0,0.12)}
+.gallery img{width:100%;height:200px;object-fit:cover;display:block}
+figcaption{padding:10px;font-size:14px;text-align:center}
+.lightbox{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);visibility:hidden;opacity:0;transition:opacity .15s}
+.lightbox[aria-hidden="false"]{visibility:visible;opacity:1}
+.lightbox .lb-content{max-width:90%;max-height:80%;text-align:center;color:white}
+.lightbox img{max-width:100%;max-height:70vh;border-radius:8px;display:block;margin:0 auto}
+.lightbox p{margin-top:8px}
+.lightbox button{position:absolute;background:none;border:0;color:white;font-size:28px;cursor:pointer;padding:12px}
+.lightbox .close{right:16px;top:16px}
+.lightbox .prev{left:8px}
+.lightbox .next{right:8px}
+@media (max-width:600px){.gallery img{height:140px}}

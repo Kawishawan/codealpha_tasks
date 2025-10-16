@@ -1,0 +1,16 @@
+/* Portfolio - style.css */
+:root{--accent:#4b7bec}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Segoe UI,Arial;margin:0;color:#111}
+.nav{display:flex;gap:16px;padding:14px 20px;background:#fff;position:sticky;top:0;box-shadow:0 6px 18px rgba(0,0,0,0.04);z-index:10}
+.nav a{color:#333;text-decoration:none}
+.hero{padding:60px 20px;text-align:center;background:linear-gradient(180deg,#f7fbff,white)}
+.hero h1{margin:0;font-size:32px}
+.hero p{margin:8px 0 16px;color:#555}
+.cta{display:inline-block;padding:10px 16px;background:var(--accent);color:white;border-radius:8px;text-decoration:none}
+.section{padding:32px 20px;max-width:900px;margin:0 auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
+.card{padding:16px;border-radius:10px;background:#fbfcff;box-shadow:0 8px 24px rgba(0,0,0,0.04)}
+.card a{display:inline-block;margin-top:8px;color:var(--accent);text-decoration:none}
+.footer{text-align:center;padding:18px;color:#777;background:#fff;margin-top:30px}
+@media (max-width:600px){.hero h1{font-size:26px}}

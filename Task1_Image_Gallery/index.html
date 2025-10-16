@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Image Gallery - CodeAlpha</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header><h1>Image Gallery</h1><p>Responsive gallery with lightbox & filters</p></header>
+
+<div class="controls">
+  <button data-filter="all" class="active">All</button>
+  <button data-filter="nature">Nature</button>
+  <button data-filter="city">City</button>
+  <button data-filter="abstract">Abstract</button>
+</div>
+
+<main class="gallery" id="gallery">
+  <!-- Images are inline SVG data URIs so the project is self-contained -->
+  <figure data-category="nature"><img alt="Nature 1" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'><rect width='100%' height='100%' fill='%2398fb98'/><text x='50%' y='50%' font-size='36' text-anchor='middle' fill='black' dy='.3em'>Nature 1</text></svg>"/><figcaption>Nature 1</figcaption></figure>
+  <figure data-category="city"><img alt="City 1" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'><rect width='100%' height='100%' fill='%23c0c0ff'/><text x='50%' y='50%' font-size='36' text-anchor='middle' fill='black' dy='.3em'>City 1</text></svg>"/><figcaption>City 1</figcaption></figure>
+  <figure data-category="abstract"><img alt="Abstract 1" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'><rect width='100%' height='100%' fill='%23ffd1dc'/><circle cx='50%' cy='40%' r='80' fill='%23999'/><text x='50%' y='80%' font-size='28' text-anchor='middle' fill='black' dy='.3em'>Abstract 1</text></svg>"/><figcaption>Abstract 1</figcaption></figure>
+  <figure data-category="nature"><img alt="Nature 2" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'><rect width='100%' height='100%' fill='%23a8e6cf'/><text x='50%' y='50%' font-size='36' text-anchor='middle' fill='black' dy='.3em'>Nature 2</text></svg>"/><figcaption>Nature 2</figcaption></figure>
+  <figure data-category="city"><img alt="City 2" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'><rect width='100%' height='100%' fill='%23f6e7b4'/><text x='50%' y='50%' font-size='36' text-anchor='middle' fill='black' dy='.3em'>City 2</text></svg>"/><figcaption>City 2</figcaption></figure>
+  <figure data-category="abstract"><img alt="Abstract 2" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'><rect width='100%' height='100%' fill='%23f0f0f0'/><rect x='20%' y='20%' width='60%' height='60%' fill='%23ffc3a0'/><text x='50%' y='50%' font-size='28' text-anchor='middle' fill='black' dy='.3em'>Abstract 2</text></svg>"/><figcaption>Abstract 2</figcaption></figure>
+</main>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <button class="close" title="Close">&times;</button>
+  <button class="prev" title="Previous">&#10094;</button>
+  <div class="lb-content"><img id="lb-img" alt="Expanded image"><p id="lb-caption"></p></div>
+  <button class="next" title="Next">&#10095;</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
